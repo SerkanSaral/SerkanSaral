@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ChatGPT Twitter Responder</title>
+</head>
+<body>
+    <h1>ChatGPT Twitter Responder Interface</h1>
+    <form id="tweetForm">
+        <label for="tweetInput">Tweet:</label>
+        <input type="text" id="tweetInput" name="tweet" required>
+        <input type="submit" value="Get Response">
+    </form>
+    <div id="response"></div>
+
+    <script>
+        document.getElementById('tweetForm').onsubmit = function(event) {
+            event.preventDefault();
+            var tweet = document.getElementById('tweetInput').value;
+            document.getElementById('response').innerText = 'Loading response...';
+            // Burada, ChatGPT API'sine bir istek gönderip yanıt almak için JavaScript fetch API'si kullanılacaktır.
+            // Alınan yanıt sayfada gösterilecek.
+        }
+    </script>
+</body>
+</html>
